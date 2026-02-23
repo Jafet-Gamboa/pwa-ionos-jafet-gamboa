@@ -27,8 +27,8 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>Tasks</h1>
-        <span className="task-count">{tasks.length} pending</span>
+        <h1>Tareas</h1>
+        <span className="task-count">{tasks.length} pendientes</span>
       </header>
 
       <div className="input-row">
@@ -37,14 +37,14 @@ function App() {
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && addTask()}
-          placeholder="Add a new task…"
+          placeholder="Agregar una nueva tarea…"
         />
-        <button className="add-btn" onClick={addTask}>Add</button>
+        <button className="add-btn" onClick={addTask}>Agregar</button>
       </div>
 
       <ul className="task-list">
         {tasks.length === 0 && (
-          <li className="empty">No tasks yet. Add one above.</li>
+          <li className="empty">Sin tareas aún. Agrega una arriba.</li>
         )}
         {tasks.map((task, i) => (
           <li key={i} className="task-item">
